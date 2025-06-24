@@ -40,9 +40,8 @@ HealthifyMeal is an AI-powered Android app that generates personalized weekly me
 
 ## Architecture
 
-![Block Diagram](docs/block-diagram.png)  
 1. **Android Frontend**  
-   − Java/Kotlin app (min. API 29).  
+   − Java app (min. API 29).  
 2. **Backend & ML**  
    − Flask service hosting a KNN model (scikit-learn) for menu generation.  
    − Firebase Realtime Database for user profiles, orders, appointments.  
@@ -64,5 +63,4 @@ HealthifyMeal is an AI-powered Android app that generates personalized weekly me
 
 1. **Clone the repo**  
    ```bash
-   git clone git@github.com:yourusername/healthifymeal.git
-   cd healthifymeal
+   git clone https://github.com/emmadismail/healthifymeal.git
