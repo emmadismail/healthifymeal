@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BMI"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/go_back_icon"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:onClick="callDashboard"
+            app:icon="@drawable/ic_back"
+            app:iconTint="@color/black"
+            android:backgroundTint="#00ffffff"
+            android:transitionName="go_back_tran" />
+
+        <ImageView
+            android:id="@+id/forgot_password_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_send"
+            android:layout_gravity="center"
+            app:tint="@color/dark_green"
+            android:transitionName="lock_tran" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bmi_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/bmi_welcome_message"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bmi_welcome"
+                android:id="@+id/weight_input"
+                android:hint="@string/bmi_weight"
+                android:layout_marginTop="20dp"
+                app:boxStrokeColor="@color/dark_green"
+                app:hintTextColor="@color/dark_gray"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/gray"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weight_input"
+                android:id="@+id/feet_input"
+                android:hint="@string/bmi_feet"
+                android:layout_marginTop="20dp"
+                app:boxStrokeColor="@color/dark_green"
+                app:hintTextColor="@color/dark_gray"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/gray"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/feet_input"
+                android:id="@+id/inches_input"
+                android:hint="@string/bmi_inches"
+                android:layout_marginTop="20dp"
+                app:boxStrokeColor="@color/dark_green"
+                app:hintTextColor="@color/dark_gray"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/gray"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/calculate_bmi_now"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/inches_input"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/dark_green"
+                android:fontFamily="@font/poppins_bold"
+                android:onClick="calculateBMI"
+                android:text="@string/calculateBMI_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:transitionName="reset_password_tran"
+                app:rippleColor="@color/white" />
+
+            <TextView
+                android:id="@+id/show_bmi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/calculate_bmi_now"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="left"
+                android:text="@string/your_bmi"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generateMealPlan1"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/go_back_icon"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:onClick="callBMIScreen"
+            app:icon="@drawable/ic_back"
+            app:iconTint="@color/black"
+            android:backgroundTint="#00ffffff"
+            android:transitionName="go_back_tran" />
+
+        <ImageView
+            android:id="@+id/meal_plan_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_send"
+            android:layout_gravity="center"
+            app:tint="@color/dark_green"
+            android:transitionName="lock_tran" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/meal_plan1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/meal_plan_welcome"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/meal_plan2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/meal_plan1"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="@string/about_you"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/meal_plan3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/meal_plan2"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/choose_your_diet"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+            <RadioGroup
+                android:id="@+id/diet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/meal_plan3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/veg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:buttonTint="@color/dark_green"
+                    android:text="@string/veg" />
+
+                <RadioButton
+                    android:id="@+id/nonveg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:buttonTint="@color/dark_green"
+                    android:text="@string/nonveg" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/meal_plan4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/diet"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/choose_your_goal"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+            <RadioGroup
+                android:id="@+id/goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/meal_plan4"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/weight_loss"
+                    android:buttonTint="@color/dark_green"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/weight_loss"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/weight_gain"
+                    android:buttonTint="@color/dark_green"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/weight_gain"/>
+
+            </RadioGroup>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/generate_meal_plan_now"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/goal"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/dark_green"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/generateMealPlan"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:transitionName="reset_password_tran"
+                app:rippleColor="@color/white" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

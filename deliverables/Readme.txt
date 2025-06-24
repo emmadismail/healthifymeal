@@ -1,0 +1,1 @@
+The project was build on Android Studio; therefore, all the android studio source files are available in the folder "Android Application Source Code". The project will run on Android Virtual Device available within the Android Studio.
