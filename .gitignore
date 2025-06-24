@@ -1,15 +1,47 @@
+# → Java / Android build outputs
+.gradle/
+build/
+*/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# → Gradle wrapper (optional)
+gradle-wrapper.jar
+
+# → IDE / project files
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
+/.idea/
+/.idea/caches/
+/.idea/libraries/
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+
+# → Local config (keep credentials & SDK paths out of Git)
 local.properties
+/local.properties
+
+# → OS-generated files
+.DS_Store
+Thumbs.db
+
+# → Logs
+*.log
+
+# → Compiled class files
+*.class
+
+# → Package files
+*.jar
+*.war
+*.ear
+
+# → Temporary files
+*.tmp
+*.temp
+~$*
+
+# → Testing
+/build-reports/
